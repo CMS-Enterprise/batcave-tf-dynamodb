@@ -4,19 +4,19 @@ variable "table-name" {
 
 variable "billing_mode" {
   type = string
-  default = "PROVISIONED"
+  default = "PAY_PER_REQUEST"
 }
 
 variable "read_capacity" {
   description = "Can only be used when billing_mode is PROVISIONED"
   type = number
-  default = 1
+  default = null
 }
 
 variable "write_capacity" {
   description = "Can only be used when billing_mode is PROVISIONED"
   type = number
-  default = 1
+  default = null
 }
 
 variable "hash_key" {
