@@ -1,6 +1,6 @@
 module "dynamodb_table" {
   source         = "terraform-aws-modules/dynamodb-table/aws"
-  version        = var.version
+  version        = var.module_version
   name           = var.table-name
   billing_mode   = var.billing_mode
   read_capacity  = var.read_capacity
