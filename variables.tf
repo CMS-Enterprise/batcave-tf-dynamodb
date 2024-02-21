@@ -1,22 +1,26 @@
+variable "version" {
+  type    = string
+  default = "3.3.0"
+}
 variable "table-name" {
   type = string
 }
 
 variable "billing_mode" {
-  type = string
+  type    = string
   default = "PAY_PER_REQUEST"
 }
 
 variable "read_capacity" {
   description = "Can only be used when billing_mode is PROVISIONED"
-  type = number
-  default = null
+  type        = number
+  default     = null
 }
 
 variable "write_capacity" {
   description = "Can only be used when billing_mode is PROVISIONED"
-  type = number
-  default = null
+  type        = number
+  default     = null
 }
 
 variable "hash_key" {
