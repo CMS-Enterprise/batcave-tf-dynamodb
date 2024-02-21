@@ -1,7 +1,3 @@
-variable "module_version" {
-  type    = string
-  default = "3.3.0"
-}
 variable "table-name" {
   type = string
 }
