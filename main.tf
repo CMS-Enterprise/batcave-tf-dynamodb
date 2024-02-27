@@ -29,13 +29,13 @@ module "dynamodb_table" {
     max_capacity       = 10
   }
 
-  autoscaling_indexes = {
-    TitleIndex = {
-      read_max_capacity  = 10
-      read_min_capacity  = 1
-      write_max_capacity = 15
-      write_min_capacity = 1
-    }
-  }
+  # autoscaling_indexes = {
+  #   TitleIndex = {
+  #     read_max_capacity  = 10
+  #     read_min_capacity  = 1
+  #     write_max_capacity = 15
+  #     write_min_capacity = 1
+  #   }
+  # }
 
 }
