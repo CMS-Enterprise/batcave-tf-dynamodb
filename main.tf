@@ -11,4 +11,31 @@ module "dynamodb_table" {
   attributes = var.attributes
 
   tags = var.tags
+
+  autoscaling_enabled                   = var.autoscaling_enabled
+  ignore_changes_global_secondary_index = var.ignore_changes_global_secondary_index
+
+  autoscaling_read = {
+    scale_in_cooldown  = 50
+    scale_out_cooldown = 40
+    target_value       = 70
+    max_capacity       = 10
+  }
+
+  autoscaling_write = {
+    scale_in_cooldown  = 50
+    scale_out_cooldown = 40
+    target_value       = 70
+    max_capacity       = 10
+  }
+
+  autoscaling_indexes = {
+    TitleIndex = {
+      read_max_capacity  = 10
+      read_min_capacity  = 1
+      write_max_capacity = 15
+      write_min_capacity = 1
+    }
+  }
+
 }
